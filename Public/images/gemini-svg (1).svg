@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <!-- Rich Obsidian Luxury Background -->
+    <linearGradient id="obsidianBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0b0e" />
+      <stop offset="50%" stop-color="#121318" />
+      <stop offset="100%" stop-color="#07080a" />
+    </linearGradient>
+
+    <!-- Ultra-Refined Liquid Champagne Gold Gradient -->
+    <linearGradient id="champagneGold" x1="0%" y1="0%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#fffbeb" />
+      <stop offset="25%" stop-color="#fde047" />
+      <stop offset="55%" stop-color="#ca8a04" />
+      <stop offset="85%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#713f12" />
+    </linearGradient>
+
+    <!-- Sleek Gunmetal Metallic for Core Elements -->
+    <linearGradient id="gunmetal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#27272a" />
+      <stop offset="50%" stop-color="#18181b" />
+      <stop offset="100%" stop-color="#09090b" />
+    </linearGradient>
+
+    <!-- Premium Glow Filters -->
+    <filter id="luxuryGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.75"/>
+    </filter>
+  </defs>
+
+  <!-- Deep Luxury Base -->
+  <rect width="800" height="800" rx="180" fill="url(#obsidianBg)" />
+
+  <!-- Subtle Geometric Architectural Lines (Leadership & Strategy Grid) -->
+  <g stroke="#ffffff" stroke-opacity="0.025" stroke-width="1.5">
+    <circle cx="400" cy="400" r="320" fill="none" />
+    <circle cx="400" cy="400" r="240" fill="none" />
+    <circle cx="400" cy="400" r="160" fill="none" />
+    <line x1="400" y1="40" x2="400" y2="760" />
+    <line x1="40" y1="400" x2="760" y2="400" />
+  </g>
+
+  <!-- Main Central Icon Composition -->
+  <g filter="url(#dropShadow)" transform="translate(0, 10)">
+
+    <!-- Executive Leadership Hierarchy & Network Nodes (Background Layer) -->
+    <g transform="translate(140, 240)">
+      <!-- Connecting Hierarchy Lines -->
+      <path d="M 260 80 L 140 180 M 260 80 L 380 180 M 140 180 L 80 280 M 140 180 L 200 280 M 380 180 L 320 280 M 380 180 L 440 280" fill="none" stroke="url(#champagneGold)" stroke-width="2" stroke-opacity="0.25" stroke-dasharray="6,4" />
+
+      <!-- Central Lead Node (Manager) -->
+      <g transform="translate(225, 40)">
+        <rect x="0" y="0" width="70" height="70" rx="16" fill="url(#gunmetal)" stroke="url(#champagneGold)" stroke-width="3" />
+        <circle cx="35" cy="35" r="14" fill="url(#champagneGold)" />
+      </g>
+
+      <!-- Team Nodes (Sub-leaders & Representatives) -->
+      <!-- Node Left -->
+      <g transform="translate(105, 150)">
+        <rect x="0" y="0" width="60" height="60" rx="14" fill="url(#gunmetal)" stroke="url(#champagneGold)" stroke-width="2" stroke-opacity="0.7" />
+        <circle cx="30" cy="30" r="10" fill="url(#champagneGold)" opacity="0.8" />
+      </g>
+      <!-- Node Right -->
+      <g transform="translate(355, 150)">
+        <rect x="0" y="0" width="60" height="60" rx="14" fill="url(#gunmetal)" stroke="url(#champagneGold)" stroke-width="2" stroke-opacity="0.7" />
+        <circle cx="30" cy="30" r="10" fill="url(#champagneGold)" opacity="0.8" />
+      </g>
+
+      <!-- Outer Growth Pillars / Metrics Beneath -->
+      <g transform="translate(60, 260)" opacity="0.9">
+        <rect x="0" y="60" width="50" height="120" rx="10" fill="url(#gunmetal)" stroke="url(#champagneGold)" stroke-width="1.5" stroke-opacity="0.4" />
+        <rect x="90" y="20" width="50" height="160" rx="10" fill="url(#gunmetal)" stroke="url(#champagneGold)" stroke-width="1.5" stroke-opacity="0.6" />
+        <rect x="180" y="0" width="50" height="180" rx="10" fill="url(#gunmetal)" stroke="url(#champagneGold)" stroke-width="2" stroke-opacity="0.9" />
+        <rect x="270" y="80" width="50" height="100" rx="10" fill="url(#gunmetal)" stroke="url(#champagneGold)" stroke-width="1.5" stroke-opacity="0.4" />
+        <rect x="360" y="30" width="50" height="150" rx="10" fill="url(#gunmetal)" stroke="url(#champagneGold)" stroke-width="1.5" stroke-opacity="0.7" />
+      </g>
+    </g>
+
+    <!-- Strategic Command Dashboard Frame / Core Crest Symbol -->
+    <g transform="translate(240, 390)" filter="url(#dropShadow)">
+      <!-- Main Shield/Board Base -->
+      <rect x="0" y="40" width="320" height="190" rx="24" fill="url(#gunmetal)" stroke="url(#champagneGold)" stroke-width="3.5" />
+      
+      <!-- Inner Graphical UI / Revenue Trend Curve -->
+      <path d="M 30 170 C 80 150, 130 90, 180 110 C 230 130, 260 70, 290 60" fill="none" stroke="url(#champagneGold)" stroke-width="6" stroke-linecap="round" filter="url(#luxuryGlow)" />
+      <path d="M 30 170 C 80 150, 130 90, 180 110 C 230 130, 260 70, 290 60" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+
+      <!-- Data Points on Curve -->
+      <circle cx="180" cy="110" r="7" fill="#0a0b0e" stroke="url(#champagneGold)" stroke-width="4" />
+      <circle cx="290" cy="60" r="9" fill="url(#champagneGold)" />
+
+      <!-- Top Management Badge/Lock -->
+      <rect x="135" y="15" width="50" height="36" rx="8" fill="url(#champagneGold)" />
+      <circle cx="160" cy="31" r="5" fill="#0a0b0e" />
+    </g>
+
+    <!-- Target & Strategy Apex (Top Right Accent) -->
+    <g transform="translate(565, 185)">
+      <circle cx="0" cy="0" r="70" fill="none" stroke="url(#champagneGold)" stroke-width="2" opacity="0.3" />
+      <circle cx="0" cy="0" r="45" fill="none" stroke="url(#champagneGold)" stroke-width="3" opacity="0.6" />
+      <circle cx="0" cy="0" r="20" fill="url(#champagneGold)" />
+      
+      <!-- Strategic Compass/Pointer Arrow -->
+      <path d="M -75 75 L -18 18" stroke="url(#champagneGold)" stroke-width="8" stroke-linecap="round" />
+      <polygon points="-3,3 -24,18 -12,-6" fill="url(#champagneGold)" />
+    </g>
+
+    <!-- Refined Diamond Sparkles / Executive Accents -->
+    <g fill="url(#champagneGold)">
+      <path d="M 140 180 Q 140 150 110 150 Q 140 150 140 120 Q 140 150 170 150 Q 140 150 140 180 Z" />
+      <path d="M 640 340 Q 640 320 620 320 Q 640 320 640 300 Q 640 320 660 320 Q 640 320 640 340 Z" transform="scale(0.75) translate(140, 60)" opacity="0.8" />
+    </g>
+
+  </g>
+</svg>

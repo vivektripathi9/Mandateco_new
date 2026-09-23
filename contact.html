@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Get in touch with MANDATECO. Enquire about a mandate, Sadhvana Farms, or Sales as a Service for your real estate project."
+    />
+    <title>Contact MANDATECO</title>
+    <link rel="stylesheet" href="css/style.css?v=brand-colors" />
+  </head>
+  <body class="page-contact">
+    <a class="skip-link" href="#contact">Skip to content</a>
+
+    <header class="site-header" id="site-header">
+      <nav class="nav" aria-label="Primary">
+        <button
+          class="nav__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open menu"
+        >
+          <span class="nav__toggle-line"></span>
+          <span class="nav__toggle-line"></span>
+        </button>
+
+        <a class="nav__brand" href="index.html">
+          <img
+            class="nav__logo"
+            src="assets/logo/mandateco-logo.png"
+            alt="MANDATECO"
+            width="220"
+            height="48"
+          />
+        </a>
+
+        <a class="nav__cta button-text" href="#enquire">Contact</a>
+      </nav>
+    </header>
+
+    <div
+      class="mobile-menu"
+      id="mobile-menu"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Menu"
+    >
+      <div class="mobile-menu__bg" aria-hidden="true"></div>
+      <nav class="mobile-menu__nav" aria-label="Site">
+        <a class="heading-md" href="index.html">Home</a>
+        <a class="heading-md" href="about.html">About</a>
+        <a class="heading-md" href="services.html">Services</a>
+        <a class="heading-md" href="careers.html">Careers</a>
+        <a class="heading-md" href="blog.html">Blogs</a>
+        <a class="heading-md" href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <main>
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact__inner">
+          <div class="contact__info">
+            <h1 class="contact__title" id="contact-title">
+              <span class="contact__title-top">GET IN</span>
+              <span class="contact__title-script">Touch</span>
+            </h1>
+
+            <div class="contact__points">
+              <article class="contact__point">
+                <h2 class="contact__label label">Corporate Office</h2>
+                <p class="contact__text description-sm">
+                  <a
+                    href="https://maps.google.com/?q=185/1,+22nd+Cross+Rd,+Jayanagar+6th+Block,+Jayanagar,+Bengaluru,+Karnataka+560070"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    185/1, 22nd Cross Rd, Jayanagar 6th Block,<br />
+                    Jayanagar, Bengaluru, Karnataka 560070
+                  </a>
+                </p>
+                <p class="contact__text description-sm">
+                  <a href="tel:+919686801199">+91 96868 01199</a>
+                </p>
+              </article>
+
+              <article class="contact__point">
+                <h2 class="contact__label label">Email</h2>
+                <p class="contact__text description-sm">
+                  For mandates, projects and general queries.
+                </p>
+                <p class="contact__text description-sm">
+                  <a href="mailto:karamalapradeep@mandateco.in">karamalapradeep@mandateco.in</a>
+                </p>
+              </article>
+
+              <article class="contact__point">
+                <h2 class="contact__label label">Call us</h2>
+                <p class="contact__text description-sm">
+                  Speak with us about your project during business hours.
+                </p>
+                <p class="contact__text description-sm">
+                  <a href="tel:+919686801199">+91 96868 01199</a>
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="enquire" id="enquire">
+            <h2 class="enquire__title heading-md">Enquire Here</h2>
+            <p class="enquire__lead description-sm">
+              Please send us your query and we’ll get back to you shortly.
+            </p>
+
+            <form class="enquire__form" id="enquire-form" novalidate>
+              <label class="enquire__field">
+                <span class="enquire__name">First Name*</span>
+                <input type="text" name="firstName" autocomplete="given-name" required />
+              </label>
+
+              <label class="enquire__field">
+                <span class="enquire__name">Email*</span>
+                <input type="email" name="email" autocomplete="email" required />
+              </label>
+
+              <label class="enquire__field">
+                <span class="enquire__name">Phone Number*</span>
+                <input type="tel" name="phone" autocomplete="tel" required />
+              </label>
+
+              <label class="enquire__field">
+                <span class="enquire__name">Select Project*</span>
+                <select name="project" required>
+                  <option value="" selected disabled>-- Please Select --</option>
+                  <option value="sadhvana-farms">Sadhvana Farms</option>
+                  <option value="general">General enquiry</option>
+                </select>
+              </label>
+
+              <label class="enquire__field">
+                <span class="enquire__name">How did you hear about us*</span>
+                <select name="source" required>
+                  <option value="" selected disabled>-- Please Select --</option>
+                  <option value="search">Search</option>
+                  <option value="referral">Referral</option>
+                  <option value="linkedin">LinkedIn</option>
+                  <option value="instagram">Instagram</option>
+                  <option value="site-visit">Site visit</option>
+                  <option value="other">Other</option>
+                </select>
+              </label>
+
+              <label class="enquire__field">
+                <span class="enquire__name">Message</span>
+                <textarea name="message" rows="1" placeholder="Brief note"></textarea>
+              </label>
+
+              <label class="enquire__check">
+                <input type="checkbox" name="consent" required />
+                <span>
+                  I authorise MANDATECO and its representatives to contact me
+                  with updates related to this enquiry via phone, email or WhatsApp.
+                </span>
+              </label>
+
+              <p class="enquire__error" id="enquire-error" hidden>
+                Please fill the required fields before submitting.
+              </p>
+
+              <button class="enquire__submit btn btn--solid button-text" type="submit">
+                Submit it
+              </button>
+
+              <p class="enquire__done" hidden>
+                Received. We’ll get back to you shortly.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer__inner">
+        <div class="footer__grid">
+          <div class="footer__col">
+            <a class="footer__brand" href="index.html">
+              <img
+                class="footer__logo"
+                src="assets/logo/mandateco-logo.png"
+                alt="MANDATECO"
+                width="220"
+                height="48"
+              />
+            </a>
+            <p class="footer__kicker label">Sales as a Service</p>
+            <p class="footer__line description-sm">Your Project. Our Mandate.</p>
+          </div>
+
+          <nav class="footer__col" aria-label="Footer">
+            <ul class="footer__list description-sm">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="blog.html">Blogs</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer__col">
+            <p class="footer__heading label">Address</p>
+            <p class="footer__line description-sm">
+              <a
+                href="https://maps.google.com/?q=185/1,+22nd+Cross+Rd,+Jayanagar+6th+Block,+Jayanagar,+Bengaluru,+Karnataka+560070"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                185/1, 22nd Cross Rd, Jayanagar 6th Block, Jayanagar, Bengaluru,
+                Karnataka 560070
+              </a>
+            </p>
+          </div>
+
+          <div class="footer__col">
+            <p class="footer__heading label">Email</p>
+            <p class="footer__line description-sm">
+              <a href="mailto:karamalapradeep@mandateco.in">karamalapradeep@mandateco.in</a>
+            </p>
+            <p class="footer__heading label">Phone</p>
+            <p class="footer__line description-sm">
+              <a href="tel:+919686801199">+91 96868 01199</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="footer__bar">
+          <p class="footer__copy description-sm">
+            © MANDATECO. All Rights Reserved.
+          </p>
+          <ul class="footer__social">
+            <li>
+              <a href="#" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M4.98 3.5A2.48 2.48 0 1 1 2.5 6a2.48 2.48 0 0 1 2.48-2.5ZM3.1 8.75h3.76V21H3.1V8.75ZM9.3 8.75h3.6v1.67h.05c.5-.95 1.73-1.95 3.56-1.95 3.8 0 4.5 2.5 4.5 5.76V21h-3.76v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9.3V8.75Z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M8 3h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5Zm0 1.7A3.3 3.3 0 0 0 4.7 8v8A3.3 3.3 0 0 0 8 19.3h8A3.3 3.3 0 0 0 19.3 16V8A3.3 3.3 0 0 0 16 4.7H8Zm8.4 1.55a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1ZM12 7.4A4.6 4.6 0 1 1 7.4 12 4.6 4.6 0 0 1 12 7.4Zm0 1.7A2.9 2.9 0 1 0 14.9 12 2.9 2.9 0 0 0 12 9.1Z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M14.2 21v-7.2h2.42l.36-2.8h-2.78V9.2c0-.81.22-1.36 1.39-1.36H17.2V5.32A19.4 19.4 0 0 0 14.86 5C12.5 5 10.9 6.44 10.9 9v1.99H8.4v2.8h2.5V21h3.3Z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js?v=contact-page"></script>
+  </body>
+</html>

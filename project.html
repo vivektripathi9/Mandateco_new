@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Projects and case studies from MANDATECO. Sales as a Service mandates across residential, luxury, plotted and commercial real estate."
+    />
+    <title>Projects | MANDATECO</title>
+    <link rel="stylesheet" href="css/style.css?v=brand-colors" />
+  </head>
+  <body class="page-projects">
+    <a class="skip-link" href="#cases-hero">Skip to content</a>
+
+    <header class="site-header" id="site-header">
+      <nav class="nav" aria-label="Primary">
+        <button
+          class="nav__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open menu"
+        >
+          <span class="nav__toggle-line"></span>
+          <span class="nav__toggle-line"></span>
+        </button>
+
+        <a class="nav__brand" href="index.html">
+          <img
+            class="nav__logo"
+            src="assets/logo/mandateco-logo.png"
+            alt="MANDATECO"
+            width="220"
+            height="48"
+          />
+        </a>
+
+        <a class="nav__cta button-text" href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <div
+      class="mobile-menu"
+      id="mobile-menu"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Menu"
+    >
+      <div class="mobile-menu__bg" aria-hidden="true"></div>
+      <nav class="mobile-menu__nav" aria-label="Site">
+        <a class="heading-md" href="index.html">Home</a>
+        <a class="heading-md" href="about.html">About</a>
+        <a class="heading-md" href="services.html">Services</a>
+        <a class="heading-md" href="careers.html">Careers</a>
+        <a class="heading-md" href="blog.html">Blogs</a>
+        <a class="heading-md" href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <main>
+      <section class="cases-hero" id="cases-hero" aria-labelledby="cases-hero-title">
+        <div class="cases-hero__media" aria-hidden="true">
+          <img
+            src="Public/images/go-digital-cover.jpg"
+            alt=""
+            width="2400"
+            height="1350"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+        <div class="cases-hero__inner">
+          <p class="cases-hero__eyebrow label">Case Studies</p>
+          <h1 class="cases-hero__title heading-xl" id="cases-hero-title">
+            <span class="cases-hero__line"><span>Real Projects.</span></span>
+            <span class="cases-hero__line"><span>Measurable Impact.</span></span>
+          </h1>
+          <p class="cases-hero__lead description-lg">
+            We partner with real estate developers to build and execute scalable
+            sales systems. Here are some of the projects where strategy, people
+            and process delivered real results.
+          </p>
+          <ul class="cases-hero__stats">
+            <li>
+              <p
+                class="cases-hero__value heading-md"
+                data-count="100"
+                data-suffix="+"
+              >
+                100+
+              </p>
+              <p class="cases-hero__label label">Projects Supported</p>
+            </li>
+            <li>
+              <p
+                class="cases-hero__value heading-md"
+                data-count="1"
+                data-suffix="M+"
+              >
+                1M+
+              </p>
+              <p class="cases-hero__label label">Qualified Leads</p>
+            </li>
+            <li>
+              <p
+                class="cases-hero__value heading-md"
+                data-count="2.5"
+                data-decimals="1"
+                data-suffix="x"
+              >
+                2.5x
+              </p>
+              <p class="cases-hero__label label">Higher Conversion</p>
+            </li>
+          </ul>
+          <p class="cases-hero__end label">Better sales. Brighter cities.</p>
+        </div>
+      </section>
+
+      <section class="cases" id="projects" aria-labelledby="cases-list-title">
+        <div class="cases__inner">
+          <div class="cases__bar">
+            <h2 class="visually-hidden" id="cases-list-title">Project list</h2>
+            <div class="cases__filters" role="group" aria-label="Filter projects">
+              <button class="cases__pill is-active" type="button" data-filter="all" aria-pressed="true">
+                All Projects
+              </button>
+              <button class="cases__pill" type="button" data-filter="residential" aria-pressed="false">
+                Residential
+              </button>
+              <button class="cases__pill" type="button" data-filter="commercial" aria-pressed="false">
+                Commercial
+              </button>
+              <button class="cases__pill" type="button" data-filter="plotted" aria-pressed="false">
+                Plotted Development
+              </button>
+              <button class="cases__pill" type="button" data-filter="luxury" aria-pressed="false">
+                Luxury
+              </button>
+              <button class="cases__pill" type="button" data-filter="ongoing" aria-pressed="false">
+                Ongoing
+              </button>
+            </div>
+          </div>
+
+          <svg class="cases-sprite" aria-hidden="true" focusable="false">
+            <symbol id="ico-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 20V8l7-4v16M11 20V6l9 4v10M4 20h16M7 11h2M7 14h2M15 12h2M15 15h2" />
+            </symbol>
+            <symbol id="ico-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z" />
+              <circle cx="12" cy="10" r="2.2" />
+            </symbol>
+            <symbol id="ico-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 11.5 12 5l8 6.5V20H4v-8.5Z" />
+              <path d="M10 20v-6h4v6" />
+            </symbol>
+            <symbol id="ico-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 12.2V4h8.2L21 13.8 12.2 22.6 3 12.2Z" />
+              <circle cx="8" cy="8" r="1.2" />
+            </symbol>
+            <symbol id="ico-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3.2" />
+              <path d="M12 4.5v2M12 17.5v2M4.5 12h2M17.5 12h2M6.4 6.4l1.4 1.4M16.2 16.2l1.4 1.4M17.6 6.4l-1.4 1.4M7.8 16.2 6.4 17.6" />
+            </symbol>
+            <symbol id="ico-people" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="8" r="2.4" />
+              <circle cx="16" cy="9" r="2" />
+              <path d="M4.5 18c.4-3 2.4-4.6 4.5-4.6S13 15 13.4 18M13.2 13.6c1.5-.3 3.2.4 4.3 2.4" />
+            </symbol>
+            <symbol id="ico-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 15.5h16v3H4v-3Z" />
+              <path d="M5.5 15.5 7.2 10h9.6l1.7 5.5" />
+              <circle cx="8" cy="18.5" r="1.2" />
+              <circle cx="16" cy="18.5" r="1.2" />
+            </symbol>
+            <symbol id="ico-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 3.5h7.2L18 7.3V20.5H7V3.5Z" />
+              <path d="M14 3.5v4h4M9.5 12h5M9.5 15.5h5" />
+            </symbol>
+            <symbol id="ico-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19h16" />
+              <path d="M7 16v-4M12 16V8M17 16v-7" />
+            </symbol>
+            <symbol id="ico-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="8" />
+              <path d="M12 8v4.4l2.8 1.6" />
+            </symbol>
+            <symbol id="ico-land" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 17.5 8 9l4.2 6.2L15.5 11 21 17.5H3Z" />
+              <path d="M3 19.5h18" />
+            </symbol>
+          </svg>
+
+          <div class="cases__list">
+            <article class="case" data-tags="plotted ongoing">
+              <figure class="case__media">
+                <img
+                  src="Public/images/projects/sadhvana-lake.jpg"
+                  alt="Lake and grounds at Sadhvana Farms"
+                  width="1200"
+                  height="900"
+                  decoding="async"
+                />
+                <span class="case__badge label">Plotted</span>
+              </figure>
+              <div class="case__body">
+                <h3 class="case__name heading-md">Sadhvana Farms</h3>
+                <ul class="case__chips">
+                  <li>
+                    <svg viewBox="0 0 24 24"><use href="#ico-building"></use></svg>
+                    Plotted development
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24"><use href="#ico-pin"></use></svg>
+                    Near Channapatna
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24"><use href="#ico-home"></use></svg>
+                    Farm community
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24"><use href="#ico-land"></use></svg>
+                    15 acres
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24"><use href="#ico-tag"></use></svg>
+                    Farm plots
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24"><use href="#ico-gear"></use></svg>
+                    Sales team deployed
+                  </li>
+                </ul>
+                <p class="case__copy description">
+                  Sadhvana Farms sits across 15 acres of lake and garden land
+                  near Channapatna. We hold the full sales mandate: positioning,
+                  enquiries, site experience and closures for a farm community
+                  built around land, not a typical apartment funnel.
+                </p>
+                <ul class="case__facts">
+                  <li>
+                    <span class="case__fact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ico-people"></use></svg></span>
+                    <span class="case__fact-value">Leads</span>
+                    <span class="case__fact-label label">Lead generation</span>
+                  </li>
+                  <li>
+                    <span class="case__fact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ico-car"></use></svg></span>
+                    <span class="case__fact-value">Visits</span>
+                    <span class="case__fact-label label">Site visits</span>
+                  </li>
+                  <li>
+                    <span class="case__fact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ico-file"></use></svg></span>
+                    <span class="case__fact-value">Closures</span>
+                    <span class="case__fact-label label">Bookings</span>
+                  </li>
+                  <li>
+                    <span class="case__fact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ico-chart"></use></svg></span>
+                    <span class="case__fact-value">CRM</span>
+                    <span class="case__fact-label label">Tracking</span>
+                  </li>
+                </ul>
+                <div class="case__foot">
+                  <p class="case__status description-sm">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ico-clock"></use></svg>
+                    On mandate
+                  </p>
+                  <a class="case__more button-text" href="contact.html">
+                    View case study
+                    <img
+                      src="Public/mandateco_icons_svg/arrow-right.svg"
+                      alt=""
+                      width="20"
+                      height="20"
+                    />
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="case" data-tags="luxury residential">
+              <figure class="case__media">
+                <img
+                  src="Public/images/projects/terrace-block.jpg"
+                  alt="High-rise residential terrace and elevation"
+                  width="1200"
+                  height="900"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="case__badge label">Luxury</span>
+              </figure>
+              <div class="case__body">
+                <h3 class="case__name heading-md">Prestige Leela Residences</h3>
+                <ul class="case__chips">
+                  <li>
+                    <svg viewBox="0 0 24 24"><use href="#ico-building"></use></svg>
+                    Prestige
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24"><use href="#ico-pin"></use></svg>
+                    Bengaluru
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24"><use href="#ico-home"></use></svg>
+                    Luxury residential
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24"><use href="#ico-tag"></use></svg>
+                    High-value inventory
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24"><use href="#ico-people"></use></svg>
+                    Mandate sales
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24"><use href="#ico-gear"></use></svg>
+                    Sales team deployed
+                  </li>
+                </ul>
+                <p class="case__copy description">
+                  Retail and mandate sales on Prestige Leela Residences. We ran
+                  the sales system so inventory could move without the developer
+                  standing up a full in-house organisation from scratch.
+                </p>
+                <ul class="case__facts">
+                  <li>
+                    <span class="case__fact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ico-people"></use></svg></span>
+                    <span class="case__fact-value">Leads</span>
+                    <span class="case__fact-label label">Lead generation</span>
+                  </li>
+                  <li>
+                    <span class="case__fact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ico-car"></use></svg></span>
+                    <span class="case__fact-value">Visits</span>
+                    <span class="case__fact-label label">Site visits</span>
+                  </li>
+                  <li>
+                    <span class="case__fact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ico-file"></use></svg></span>
+                    <span class="case__fact-value">Closures</span>
+                    <span class="case__fact-label label">Bookings</span>
+                  </li>
+                  <li>
+                    <span class="case__fact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ico-chart"></use></svg></span>
+                    <span class="case__fact-value">CRM</span>
+                    <span class="case__fact-label label">Tracking</span>
+                  </li>
+                </ul>
+                <div class="case__foot">
+                  <p class="case__status description-sm">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ico-clock"></use></svg>
+                    Mandate complete
+                  </p>
+                  <a class="case__more button-text" href="contact.html">
+                    View case study
+                    <img
+                      src="Public/mandateco_icons_svg/arrow-right.svg"
+                      alt=""
+                      width="20"
+                      height="20"
+                    />
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="case" data-tags="commercial">
+              <figure class="case__media">
+                <img
+                  src="Public/images/about-building.jpg"
+                  alt="Commercial building elevation"
+                  width="1200"
+                  height="900"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="case__badge label">Commercial</span>
+              </figure>
+              <div class="case__body">
+                <h3 class="case__name heading-md">Office, Retail &amp; Industrial</h3>
+                <ul class="case__chips">
+                  <li>
+                    <svg viewBox="0 0 24 24"><use href="#ico-building"></use></svg>
+                    Commercial
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24"><use href="#ico-pin"></use></svg>
+                    Bengaluru
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24"><use href="#ico-home"></use></svg>
+                    Office / retail / industrial
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24"><use href="#ico-tag"></use></svg>
+                    Sell or lease
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24"><use href="#ico-people"></use></svg>
+                    Owner mandates
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24"><use href="#ico-gear"></use></svg>
+                    Sales team deployed
+                  </li>
+                </ul>
+                <p class="case__copy description">
+                  We take the mandate for office, retail and industrial space.
+                  Same lead-to-closure system as residential: campaigns,
+                  qualification, site visits, negotiation and documentation,
+                  built for owners who need to exit or lease without a standing
+                  sales desk.
+                </p>
+                <ul class="case__facts">
+                  <li>
+                    <span class="case__fact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ico-people"></use></svg></span>
+                    <span class="case__fact-value">Leads</span>
+                    <span class="case__fact-label label">Lead generation</span>
+                  </li>
+                  <li>
+                    <span class="case__fact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ico-car"></use></svg></span>
+                    <span class="case__fact-value">Visits</span>
+                    <span class="case__fact-label label">Site visits</span>
+                  </li>
+                  <li>
+                    <span class="case__fact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ico-file"></use></svg></span>
+                    <span class="case__fact-value">Closures</span>
+                    <span class="case__fact-label label">Bookings</span>
+                  </li>
+                  <li>
+                    <span class="case__fact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ico-chart"></use></svg></span>
+                    <span class="case__fact-value">CRM</span>
+                    <span class="case__fact-label label">Tracking</span>
+                  </li>
+                </ul>
+                <div class="case__foot">
+                  <p class="case__status description-sm">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ico-clock"></use></svg>
+                    On mandate
+                  </p>
+                  <a class="case__more button-text" href="contact.html">
+                    View case study
+                    <img
+                      src="Public/mandateco_icons_svg/arrow-right.svg"
+                      alt=""
+                      width="20"
+                      height="20"
+                    />
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="case" data-tags="residential">
+              <figure class="case__media">
+                <img
+                  src="Public/images/projects/oval.jpg"
+                  alt="Residential development grounds"
+                  width="1200"
+                  height="900"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="case__badge label">Residential</span>
+              </figure>
+              <div class="case__body">
+                <h3 class="case__name heading-md">Sobha Royal Pavilion</h3>
+                <ul class="case__chips">
+                  <li>
+                    <svg viewBox="0 0 24 24"><use href="#ico-building"></use></svg>
+                    Sobha
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24"><use href="#ico-pin"></use></svg>
+                    Bengaluru
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24"><use href="#ico-home"></use></svg>
+                    Residential
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24"><use href="#ico-tag"></use></svg>
+                    Homes
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24"><use href="#ico-people"></use></svg>
+                    Mandate sales
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24"><use href="#ico-gear"></use></svg>
+                    Sales team deployed
+                  </li>
+                </ul>
+                <p class="case__copy description">
+                  Mandate sales across Sobha Royal Pavilion. One team owned the
+                  funnel from first enquiry to booking, so the conversation the
+                  buyer started on a call was the same conversation that closed
+                  on site.
+                </p>
+                <ul class="case__facts">
+                  <li>
+                    <span class="case__fact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ico-people"></use></svg></span>
+                    <span class="case__fact-value">Leads</span>
+                    <span class="case__fact-label label">Lead generation</span>
+                  </li>
+                  <li>
+                    <span class="case__fact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ico-car"></use></svg></span>
+                    <span class="case__fact-value">Visits</span>
+                    <span class="case__fact-label label">Site visits</span>
+                  </li>
+                  <li>
+                    <span class="case__fact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ico-file"></use></svg></span>
+                    <span class="case__fact-value">Closures</span>
+                    <span class="case__fact-label label">Bookings</span>
+                  </li>
+                  <li>
+                    <span class="case__fact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ico-chart"></use></svg></span>
+                    <span class="case__fact-value">CRM</span>
+                    <span class="case__fact-label label">Tracking</span>
+                  </li>
+                </ul>
+                <div class="case__foot">
+                  <p class="case__status description-sm">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ico-clock"></use></svg>
+                    Mandate complete
+                  </p>
+                  <a class="case__more button-text" href="contact.html">
+                    View case study
+                    <img
+                      src="Public/mandateco_icons_svg/arrow-right.svg"
+                      alt=""
+                      width="20"
+                      height="20"
+                    />
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <p class="cases__empty description" hidden>
+            No projects in this category yet.
+          </p>
+        </div>
+      </section>
+
+      <section class="closer" id="contact" aria-labelledby="contact-title">
+        <div class="closer__media" aria-hidden="true">
+          <img
+            src="Public/images/CTA.jpg"
+            alt=""
+            width="2400"
+            height="1600"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="closer__inner">
+          <h2 class="closer__title heading-lg" id="contact-title">
+            <span class="closer__line"><span>Inventory waiting.</span></span>
+            <span class="closer__line"><span>Sales lagging?</span></span>
+          </h2>
+          <p class="closer__lead description-lg">
+            Put the mandate on it.
+          </p>
+          <a class="closer__cta button-text" href="contact.html">
+            Partner with MANDATECO
+            <img
+              src="Public/mandateco_icons_svg/arrow-right.svg"
+              alt=""
+              width="24"
+              height="24"
+            />
+          </a>
+        </div>
+        <div class="closer__wave" aria-hidden="true">
+          <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+            <path
+              fill="currentColor"
+              d="M0,38 C180,12 360,10 540,32 C760,58 940,78 1160,52 C1300,36 1380,34 1440,42 L1440,90 L0,90 Z"
+            />
+          </svg>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer__inner">
+        <div class="footer__grid">
+          <div class="footer__col">
+            <a class="footer__brand" href="index.html">
+              <img
+                class="footer__logo"
+                src="assets/logo/mandateco-logo.png"
+                alt="MANDATECO"
+                width="220"
+                height="48"
+              />
+            </a>
+            <p class="footer__kicker label">Sales as a Service</p>
+            <p class="footer__line description-sm">Your Project. Our Mandate.</p>
+          </div>
+
+          <nav class="footer__col" aria-label="Footer">
+            <ul class="footer__list description-sm">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="blog.html">Blogs</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer__col">
+            <p class="footer__heading label">Address</p>
+            <p class="footer__line description-sm">
+              <a
+                href="https://maps.google.com/?q=185/1,+22nd+Cross+Rd,+Jayanagar+6th+Block,+Jayanagar,+Bengaluru,+Karnataka+560070"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                185/1, 22nd Cross Rd, Jayanagar 6th Block, Jayanagar, Bengaluru,
+                Karnataka 560070
+              </a>
+            </p>
+          </div>
+
+          <div class="footer__col">
+            <p class="footer__heading label">Email</p>
+            <p class="footer__line description-sm">
+              <a href="mailto:karamalapradeep@mandateco.in">karamalapradeep@mandateco.in</a>
+            </p>
+            <p class="footer__heading label">Phone</p>
+            <p class="footer__line description-sm">
+              <a href="tel:+919686801199">+91 96868 01199</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="footer__bar">
+          <p class="footer__copy description-sm">
+            © MANDATECO. All Rights Reserved.
+          </p>
+          <ul class="footer__social">
+            <li>
+              <a href="#" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M4.98 3.5A2.48 2.48 0 1 1 2.5 6a2.48 2.48 0 0 1 2.48-2.5ZM3.1 8.75h3.76V21H3.1V8.75ZM9.3 8.75h3.6v1.67h.05c.5-.95 1.73-1.95 3.56-1.95 3.8 0 4.5 2.5 4.5 5.76V21h-3.76v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9.3V8.75Z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M8 3h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5Zm0 1.7A3.3 3.3 0 0 0 4.7 8v8A3.3 3.3 0 0 0 8 19.3h8A3.3 3.3 0 0 0 19.3 16V8A3.3 3.3 0 0 0 16 4.7H8Zm8.4 1.55a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1ZM12 7.4A4.6 4.6 0 1 1 7.4 12 4.6 4.6 0 0 1 12 7.4Zm0 1.7A2.9 2.9 0 1 0 14.9 12 2.9 2.9 0 0 0 12 9.1Z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M14.2 21v-7.2h2.42l.36-2.8h-2.78V9.2c0-.81.22-1.36 1.39-1.36H17.2V5.32A19.4 19.4 0 0 0 14.86 5C12.5 5 10.9 6.44 10.9 9v1.99H8.4v2.8h2.5V21h3.3Z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js?v=projects-icons"></script>
+  </body>
+</html>

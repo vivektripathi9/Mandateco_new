@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <!-- Rich Obsidian Luxury Background -->
+    <linearGradient id="obsidianBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0b0e" />
+      <stop offset="50%" stop-color="#121318" />
+      <stop offset="100%" stop-color="#07080a" />
+    </linearGradient>
+
+    <!-- Ultra-Refined Liquid Champagne Gold Gradient -->
+    <linearGradient id="champagneGold" x1="0%" y1="0%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#fffbeb" />
+      <stop offset="25%" stop-color="#fde047" />
+      <stop offset="55%" stop-color="#ca8a04" />
+      <stop offset="85%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#713f12" />
+    </linearGradient>
+
+    <!-- Sleek Gunmetal Metallic for Core Elements -->
+    <linearGradient id="gunmetal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#27272a" />
+      <stop offset="50%" stop-color="#18181b" />
+      <stop offset="100%" stop-color="#09090b" />
+    </linearGradient>
+
+    <!-- Premium Glow Filters -->
+    <filter id="luxuryGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.75"/>
+    </filter>
+  </defs>
+
+  <!-- Deep Luxury Base -->
+  <rect width="800" height="800" rx="180" fill="url(#obsidianBg)" />
+
+  <!-- Subtle Geometric Architectural Lines (People & Structure Grid) -->
+  <g stroke="#ffffff" stroke-opacity="0.025" stroke-width="1.5">
+    <circle cx="400" cy="400" r="320" fill="none" />
+    <circle cx="400" cy="400" r="240" fill="none" />
+    <circle cx="400" cy="400" r="160" fill="none" />
+    <line x1="400" y1="40" x2="400" y2="760" />
+    <line x1="40" y1="400" x2="760" y2="400" />
+  </g>
+
+  <!-- Main Central Icon Composition -->
+  <g filter="url(#dropShadow)" transform="translate(0, 10)">
+
+    <!-- People / Talent Network Nodes (Background Layer) -->
+    <g transform="translate(140, 240)">
+      <!-- Connecting Hierarchy Lines -->
+      <path d="M 260 80 L 140 180 M 260 80 L 380 180 M 140 180 L 90 280 M 140 180 L 190 280 M 380 180 L 330 280 M 380 180 L 430 280" fill="none" stroke="url(#champagneGold)" stroke-width="2" stroke-opacity="0.25" stroke-dasharray="6,4" />
+
+      <!-- Central Talent Lead / HR Node -->
+      <g transform="translate(230, 40)">
+        <circle cx="35" cy="20" r="14" fill="url(#champagneGold)" />
+        <path d="M 12 50 C 12 36, 58 36, 58 50 Z" fill="url(#champagneGold)" />
+        <rect x="0" y="0" width="70" height="60" rx="16" fill="none" stroke="url(#champagneGold)" stroke-width="3" />
+      </g>
+
+      <!-- Sub-Nodes / Team Members -->
+      <!-- Node Left -->
+      <g transform="translate(110, 150)">
+        <circle cx="30" cy="18" r="10" fill="url(#champagneGold)" opacity="0.8" />
+        <path d="M 12 44 C 12 32, 48 32, 48 44 Z" fill="url(#champagneGold)" opacity="0.8" />
+        <rect x="0" y="0" width="60" height="52" rx="14" fill="none" stroke="url(#champagneGold)" stroke-width="2" stroke-opacity="0.7" />
+      </g>
+      <!-- Node Right -->
+      <g transform="translate(350, 150)">
+        <circle cx="30" cy="18" r="10" fill="url(#champagneGold)" opacity="0.8" />
+        <path d="M 12 44 C 12 32, 48 32, 48 44 Z" fill="url(#champagneGold)" opacity="0.8" />
+        <rect x="0" y="0" width="60" height="52" rx="14" fill="none" stroke="url(#champagneGold)" stroke-width="2" stroke-opacity="0.7" />
+      </g>
+    </g>
+
+    <!-- Core Executive Personnel Folder / Admin Records Shield -->
+    <g transform="translate(240, 390)" filter="url(#dropShadow)">
+      <!-- Main Folder / Administration Base -->
+      <rect x="0" y="40" width="320" height="190" rx="24" fill="url(#gunmetal)" stroke="url(#champagneGold)" stroke-width="3.5" />
+      
+      <!-- Folder Tab Header -->
+      <path d="M 40 40 L 40 20 C 40 12, 48 8, 56 8 L 140 8 C 148 8, 156 12, 156 20 L 156 40 Z" fill="url(#gunmetal)" stroke="url(#champagneGold)" stroke-width="2.5" />
+
+      <!-- Inner Document Lines / Checklist (Admin Organization) -->
+      <g transform="translate(45, 80)">
+        <!-- Line 1 with Checkbox -->
+        <rect x="0" y="0" width="22" height="22" rx="6" fill="none" stroke="url(#champagneGold)" stroke-width="2.5" />
+        <path d="M 6 11 L 10 15 L 17 7" fill="none" stroke="url(#champagneGold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        <line x1="38" y1="11" x2="210" y2="11" stroke="#ffffff" stroke-opacity="0.3" stroke-width="4" stroke-linecap="round" />
+
+        <!-- Line 2 with Checkbox -->
+        <rect x="0" y="42" width="22" height="22" rx="6" fill="none" stroke="url(#champagneGold)" stroke-width="2.5" />
+        <path d="M 6 53 L 10 57 L 17 49" fill="none" stroke="url(#champagneGold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        <line x1="38" y1="53" x2="180" y2="53" stroke="#ffffff" stroke-opacity="0.3" stroke-width="4" stroke-linecap="round" />
+
+        <!-- Line 3 with Checkbox -->
+        <rect x="0" y="84" width="22" height="22" rx="6" fill="none" stroke="url(#champagneGold)" stroke-width="2.5" />
+        <path d="M 6 95 L 10 99 L 17 91" fill="none" stroke="url(#champagneGold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        <line x1="38" y1="95" x2="220" y2="95" stroke="#ffffff" stroke-opacity="0.3" stroke-width="4" stroke-linecap="round" />
+      </g>
+    </g>
+
+    <!-- Target & Talent Acquisition Apex (Top Right Accent) -->
+    <g transform="translate(565, 185)">
+      <circle cx="0" cy="0" r="70" fill="none" stroke="url(#champagneGold)" stroke-width="2" opacity="0.3" />
+      <circle cx="0" cy="0" r="45" fill="none" stroke="url(#champagneGold)" stroke-width="3" opacity="0.6" />
+      <circle cx="0" cy="0" r="20" fill="url(#champagneGold)" />
+      
+      <!-- Pointer / Arrow -->
+      <path d="M -75 75 L -18 18" stroke="url(#champagneGold)" stroke-width="8" stroke-linecap="round" />
+      <polygon points="-3,3 -24,18 -12,-6" fill="url(#champagneGold)" />
+    </g>
+
+    <!-- Refined Diamond Sparkles / HR Accents -->
+    <g fill="url(#champagneGold)">
+      <path d="M 140 180 Q 140 150 110 150 Q 140 150 140 120 Q 140 150 170 150 Q 140 150 140 180 Z" />
+      <path d="M 640 340 Q 640 320 620 320 Q 640 320 640 300 Q 640 320 660 320 Q 640 320 640 340 Z" transform="scale(0.75) translate(140, 60)" opacity="0.8" />
+    </g>
+
+  </g>
+</svg>
