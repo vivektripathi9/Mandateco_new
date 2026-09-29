@@ -142,6 +142,7 @@
   });
   pauseOffscreen(hero);
   pauseOffscreen(journey);
+  pauseOffscreen(projects);
   observeReveal(quotes);
   observeReveal(projects, null, {
     threshold: 0.04,
