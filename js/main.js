@@ -142,12 +142,12 @@
   });
   pauseOffscreen(hero);
   pauseOffscreen(journey);
-  pauseOffscreen(projects);
   observeReveal(quotes);
   observeReveal(projects, null, {
     threshold: 0.04,
     rootMargin: "0px 0px -8% 0px",
   });
+  initProjectsMarquee(projects);
   observeReveal(blog);
   observeReveal(closer);
   observeReveal(compare);
@@ -874,6 +874,106 @@
       }
 
       window.requestAnimationFrame(tick);
+    });
+  }
+
+  function initProjectsMarquee(section) {
+    if (!section) return;
+    const track = section.querySelector(".projects__track");
+    const sets = section.querySelectorAll(".projects__logos");
+    if (!track || sets.length < 2) return;
+
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    if (reduceMotion && !isMobile) return;
+
+    let offset = 0;
+    let setWidth = 0;
+    let last = 0;
+    let raf = 0;
+    let visible = true;
+    const speed = isMobile ? 36 : 42;
+
+    function measure() {
+      const styles = window.getComputedStyle(track);
+      const gap = parseFloat(styles.columnGap || styles.gap) || 0;
+      setWidth = sets[0].getBoundingClientRect().width + gap;
+      if (setWidth > 0) offset = offset % setWidth;
+    }
+
+    function frame(now) {
+      if (!visible || document.hidden || setWidth <= 0) {
+        last = now;
+        raf = window.requestAnimationFrame(frame);
+        return;
+      }
+      if (!last) last = now;
+      const dt = Math.min(0.032, (now - last) / 1000);
+      last = now;
+      offset += speed * dt;
+      if (offset >= setWidth) offset -= setWidth;
+      track.style.transform = "translate3d(" + (-offset).toFixed(2) + "px,0,0)";
+      raf = window.requestAnimationFrame(frame);
+    }
+
+    function start() {
+      measure();
+      if (!raf) {
+        last = 0;
+        raf = window.requestAnimationFrame(frame);
+      }
+    }
+
+    track.classList.add("is-js-marquee");
+    track.style.animation = "none";
+    track.style.webkitAnimation = "none";
+
+    const imgs = track.querySelectorAll("img");
+    let pending = 0;
+    imgs.forEach(function (img) {
+      if (img.complete) return;
+      pending += 1;
+      img.addEventListener(
+        "load",
+        function () {
+          pending -= 1;
+          measure();
+        },
+        { once: true }
+      );
+      img.addEventListener(
+        "error",
+        function () {
+          pending -= 1;
+          measure();
+        },
+        { once: true }
+      );
+    });
+
+    start();
+    window.addEventListener(
+      "resize",
+      function () {
+        measure();
+      },
+      { passive: true }
+    );
+
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            visible = entry.isIntersecting;
+            if (visible) last = 0;
+          });
+        },
+        { rootMargin: "20% 0px" }
+      );
+      io.observe(section);
+    }
+
+    document.addEventListener("visibilitychange", function () {
+      if (!document.hidden) last = 0;
     });
   }
 })();

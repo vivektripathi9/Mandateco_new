@@ -2620,39 +2620,50 @@ button {
   transition-delay: 0.18s;
 }
 
+
+
 .projects__marquee {
   position: relative;
   width: 100%;
   overflow: hidden;
-  mask-image: linear-gradient(
-    90deg,
-    transparent 0%,
-    #000 8%,
-    #000 92%,
-    transparent 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    90deg,
-    transparent 0%,
-    #000 8%,
-    #000 92%,
-    transparent 100%
-  );
+}
+
+.projects__marquee::before,
+.projects__marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(1.5rem, 4vw, 3.5rem);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.projects__marquee::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--white) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.projects__marquee::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--white) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .projects__track {
   display: flex;
   flex-wrap: nowrap;
+  align-items: center;
   width: max-content;
-  gap: 0;
-  animation: projects-marquee 70s linear infinite;
-  will-change: transform;
+  gap: clamp(2.25rem, 4vw, 3.5rem);
   transform: translate3d(0, 0, 0);
+  will-change: transform;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
-.projects.is-away .projects__track {
-  animation-play-state: paused;
+.projects__track.is-js-marquee {
+  animation: none !important;
+  -webkit-animation: none !important;
 }
 
 .projects__logos {
@@ -2660,9 +2671,9 @@ button {
   flex-wrap: nowrap;
   align-items: center;
   flex: 0 0 auto;
-  gap: clamp(2.5rem, 5vw, 5.5rem);
+  gap: clamp(2.25rem, 4vw, 3.5rem);
   margin: 0;
-  padding: 0.5rem clamp(1.25rem, 3vw, 2.75rem);
+  padding: 0.65rem 0;
   list-style: none;
 }
 
@@ -2692,15 +2703,6 @@ button {
   filter: brightness(0);
 }
 
-@keyframes projects-marquee {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(-50%, 0, 0);
-  }
-}
-
 @media (max-width: 768px) {
   .projects {
     padding: clamp(2.25rem, 7vw, 3.25rem) 0;
@@ -2722,35 +2724,13 @@ button {
     line-height: 1.55;
   }
 
-  .projects__marquee {
-    mask-image: linear-gradient(
-      90deg,
-      transparent 0%,
-      #000 5%,
-      #000 95%,
-      transparent 100%
-    );
-    -webkit-mask-image: linear-gradient(
-      90deg,
-      transparent 0%,
-      #000 5%,
-      #000 95%,
-      transparent 100%
-    );
-  }
-
   .projects__track {
-    animation: projects-marquee 55s linear infinite;
-    animation-play-state: running;
-  }
-
-  .projects.is-away .projects__track {
-    animation-play-state: running;
+    gap: 2rem;
   }
 
   .projects__logos {
-    gap: 2.25rem;
-    padding: 0.25rem 1.15rem;
+    gap: 2rem;
+    padding: 0.45rem 0;
   }
 
   .projects__logos img {
@@ -2765,13 +2745,13 @@ button {
     margin-bottom: 1.4rem;
   }
 
-  .projects__track {
-    animation-duration: 48s;
+  .projects__track,
+  .projects__logos {
+    gap: 1.75rem;
   }
 
   .projects__logos {
-    gap: 1.85rem;
-    padding: 0.15rem 0.9rem;
+    padding: 0.35rem 0;
   }
 
   .projects__logos img {
@@ -2782,14 +2762,15 @@ button {
 
 @media (prefers-reduced-motion: reduce) {
   .projects__track {
-    animation: none;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
     max-width: var(--max);
     margin: 0 auto;
     padding: 0 var(--pad-x);
-    gap: 1rem;
+    gap: 1.25rem;
+    transform: none !important;
+    will-change: auto;
   }
 
   .projects__logos[aria-hidden="true"] {
@@ -2799,12 +2780,11 @@ button {
   .projects__logos {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.25rem;
     padding: 0;
   }
 }
 
-/* Keep the logo strip moving on phones even when OS reduced-motion is on */
 @media (max-width: 768px) and (prefers-reduced-motion: reduce) {
   .projects__track {
     display: flex;
@@ -2813,9 +2793,8 @@ button {
     max-width: none;
     margin: 0;
     padding: 0;
-    gap: 0;
-    animation: projects-marquee 55s linear infinite !important;
-    animation-play-state: running !important;
+    gap: 2rem;
+    will-change: transform;
   }
 
   .projects__logos[aria-hidden="true"] {
@@ -2825,8 +2804,8 @@ button {
   .projects__logos {
     flex-wrap: nowrap;
     justify-content: flex-start;
-    gap: 2.25rem;
-    padding: 0.25rem 1.15rem;
+    gap: 2rem;
+    padding: 0.45rem 0;
   }
 }
 
