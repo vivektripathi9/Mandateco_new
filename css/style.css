@@ -2645,7 +2645,7 @@ button {
   flex-wrap: nowrap;
   width: max-content;
   gap: 0;
-  animation: projects-marquee 55s linear infinite;
+  animation: projects-marquee 70s linear infinite;
   will-change: transform;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
@@ -2686,6 +2686,10 @@ button {
   pointer-events: none;
   user-select: none;
   -webkit-user-drag: none;
+}
+
+.projects__logos img.projects__logo--dark {
+  filter: brightness(0);
 }
 
 @keyframes projects-marquee {
@@ -2736,7 +2740,7 @@ button {
   }
 
   .projects__track {
-    animation: projects-marquee 42s linear infinite;
+    animation: projects-marquee 55s linear infinite;
     animation-play-state: running;
   }
 
@@ -2762,7 +2766,7 @@ button {
   }
 
   .projects__track {
-    animation-duration: 36s;
+    animation-duration: 48s;
   }
 
   .projects__logos {
@@ -2810,7 +2814,7 @@ button {
     margin: 0;
     padding: 0;
     gap: 0;
-    animation: projects-marquee 42s linear infinite !important;
+    animation: projects-marquee 55s linear infinite !important;
     animation-play-state: running !important;
   }
 
