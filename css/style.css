@@ -2645,7 +2645,7 @@ button {
   flex-wrap: nowrap;
   width: max-content;
   gap: 0;
-  animation: projects-marquee 36s linear infinite;
+  animation: projects-marquee 55s linear infinite;
   will-change: transform;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
@@ -2736,7 +2736,7 @@ button {
   }
 
   .projects__track {
-    animation: projects-marquee 22s linear infinite;
+    animation: projects-marquee 42s linear infinite;
     animation-play-state: running;
   }
 
@@ -2762,7 +2762,7 @@ button {
   }
 
   .projects__track {
-    animation-duration: 18s;
+    animation-duration: 36s;
   }
 
   .projects__logos {
@@ -2810,7 +2810,7 @@ button {
     margin: 0;
     padding: 0;
     gap: 0;
-    animation: projects-marquee 22s linear infinite !important;
+    animation: projects-marquee 42s linear infinite !important;
     animation-play-state: running !important;
   }
 
