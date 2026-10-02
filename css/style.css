@@ -1053,9 +1053,9 @@ button {
   margin: 0 0 0.35rem;
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: clamp(1.15rem, 1.7vw, 1.45rem);
+  font-size: clamp(1.85rem, 4.2vw, 2.55rem);
   letter-spacing: var(--tracking-tight);
-  line-height: 1.25;
+  line-height: 1.15;
   overflow: hidden;
   padding-bottom: 0.12em;
   color: var(--white);
@@ -1101,9 +1101,9 @@ button {
   margin: 0;
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: clamp(1.02rem, 1.55vw, 1.22rem);
+  font-size: clamp(1.05rem, 2.4vw, 1.28rem);
   letter-spacing: var(--tracking-tight);
-  line-height: 1.4;
+  line-height: 1.45;
   color: var(--white);
 }
 
@@ -3406,6 +3406,7 @@ button {
   color: var(--white);
   background: #ffffff;
   scroll-margin-top: var(--nav-h);
+  margin-bottom: -2px;
 }
 
 .closer__media {
@@ -3449,17 +3450,39 @@ button {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -1px;
+  bottom: -2px;
   height: clamp(4.5rem, 8vw, 6.25rem);
   z-index: 2;
   color: var(--white);
   pointer-events: none;
+  line-height: 0;
 }
 
 .closer__wave svg {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 900px) {
+  .closer {
+    margin-bottom: 0;
+  }
+
+  .closer__wave {
+    display: none;
+  }
+
+  .site-footer {
+    border: none;
+    box-shadow: none;
+  }
+
+  .footer__bar {
+    border: none;
+    margin-top: 1.25rem;
+    padding-top: 0;
+  }
 }
 
 .closer__title {
@@ -3648,8 +3671,8 @@ button {
   align-items: center;
   gap: 0.75rem 1.5rem;
   margin-top: 1.65rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(6, 75, 120, 0.12);
+  padding-top: 0;
+  border-top: none;
 }
 
 .footer__copy {
@@ -4710,6 +4733,40 @@ button {
 }
 
 @media (max-width: 720px) {
+  .svc-row,
+  .svc-row--flip {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .svc-row__num,
+  .svc-row--flip .svc-row__num {
+    grid-column: 1;
+    grid-row: auto;
+    font-size: clamp(1.7rem, 8vw, 2.2rem);
+    padding-top: 0;
+  }
+
+  .svc-row__body,
+  .svc-row--flip .svc-row__body {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .svc-row__media,
+  .svc-row--flip .svc-row__media {
+    grid-column: 1;
+    grid-row: auto;
+    order: -1;
+    max-width: none;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+  }
+
+  .svc-row__title {
+    max-width: none;
+  }
+
   .svc-row__points {
     grid-template-columns: 1fr;
   }
@@ -4726,6 +4783,103 @@ button {
 
   .svc-row__points li:last-child {
     border-bottom: 1px solid var(--hairline);
+  }
+
+  .svc-row__flow {
+    gap: 0.4rem;
+  }
+
+  .svc-row__flow li {
+    padding: 0.45rem 0.65rem;
+    font-size: 0.72rem;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Services page — mobile polish                                              */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .page-services {
+    overflow-x: clip;
+  }
+
+  .page-services .svc-hero {
+    min-height: min(100svh, 42rem);
+  }
+
+  .page-services .svc-hero__inner {
+    min-height: min(100svh, 42rem);
+    padding-top: calc(var(--nav-h) + 1.75rem);
+    padding-bottom: clamp(2rem, 6vw, 3rem);
+  }
+
+  .page-services .svc-hero__title {
+    max-width: 14ch;
+    margin-bottom: 0.9rem;
+  }
+
+  .page-services .svc-hero__lead {
+    max-width: 34rem;
+    font-size: 1.02rem;
+    line-height: 1.55;
+  }
+
+  .page-services .svc-list {
+    padding-top: clamp(1.5rem, 5vw, 2.5rem);
+    padding-bottom: clamp(0.5rem, 2vw, 1rem);
+  }
+
+  .page-services .svc-row,
+  .page-services .svc-row--flip {
+    padding-top: clamp(1.75rem, 5vw, 2.5rem);
+    padding-bottom: clamp(1.75rem, 5vw, 2.5rem);
+  }
+
+  .page-services .blog {
+    padding-top: clamp(2.5rem, 8vw, 3.5rem);
+    padding-bottom: clamp(2.5rem, 8vw, 3.5rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .page-services .nav {
+    gap: 0.65rem;
+    padding-inline: 1rem;
+  }
+
+  .page-services .nav__cta {
+    padding: 0 0.8rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+  }
+
+  .page-services .svc-hero__title {
+    font-size: clamp(1.85rem, 8.5vw, 2.35rem);
+    line-height: 1.12;
+    max-width: 12ch;
+  }
+
+  .page-services .svc-row__label {
+    margin-bottom: 0.45rem;
+  }
+
+  .page-services .svc-row__title {
+    margin-bottom: 0.75rem;
+    font-size: clamp(1.35rem, 6vw, 1.65rem);
+  }
+
+  .page-services .svc-row__body > .description {
+    margin-bottom: 0.8rem;
+  }
+
+  .page-services .svc-row__body > .description:last-of-type {
+    margin-bottom: 1.1rem;
+  }
+
+  .page-services .svc-row__media,
+  .page-services .svc-row--flip .svc-row__media {
+    aspect-ratio: 3 / 2;
   }
 }
 
@@ -4754,19 +4908,30 @@ button {
 
   .founder__inner {
     grid-template-columns: 1fr;
-    gap: 2.25rem;
+    gap: 1.75rem;
   }
 
   .founder__media {
     width: 100%;
-    max-width: 24rem;
+    max-width: none;
     height: auto;
     min-height: 0;
     aspect-ratio: 4 / 5;
+    max-height: 28rem;
   }
 
   .founder__copyblock {
-    max-width: 38rem;
+    max-width: none;
+    padding: 0;
+  }
+
+  .founder__philosophy {
+    margin-bottom: 1.15rem;
+    padding-left: 0.85rem;
+  }
+
+  .founder__copy p {
+    margin-bottom: 0.8rem;
   }
 
   .offer__head {
@@ -4919,6 +5084,12 @@ button {
   .footer__grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .footer__bar {
+    border-top: none;
+    margin-top: 1.25rem;
+    padding-top: 0;
   }
 }
 
@@ -7132,11 +7303,35 @@ button {
 @media (max-width: 900px) {
   .philo__inner {
     grid-template-columns: 1fr;
+    gap: 1.75rem;
+    width: 100%;
+    max-width: 100%;
   }
 
   .philo__media {
-    min-height: 22rem;
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
     aspect-ratio: 16 / 11;
+  }
+
+  .philo__overlay {
+    padding: 1.25rem 1.1rem;
+  }
+
+  .philo__words {
+    font-size: clamp(1.35rem, 6vw, 1.85rem);
+  }
+
+  .philo .post-qa__toggle {
+    grid-template-columns: 1.75rem minmax(0, 1fr) 1rem;
+    gap: 0.55rem;
+    padding: 0.9rem 0;
+  }
+
+  .philo .post-qa__question {
+    font-size: 0.98rem;
+    line-height: 1.35;
   }
 }
 
@@ -8124,6 +8319,7 @@ button {
 @media (max-width: 720px) {
   .expertise__board {
     grid-template-columns: 1fr;
+    gap: 0.85rem;
   }
 
   .ex-card,
@@ -8135,14 +8331,14 @@ button {
   .ex-card--wide .ex-card__body {
     width: 100%;
     background: var(--white);
-    padding-bottom: 1.25rem;
+    padding: 1rem 1rem 1.15rem;
   }
 
   .ex-card__media,
   .ex-card--wide .ex-card__media {
     position: relative;
     inset: auto;
-    height: 9.5rem;
+    height: 11rem;
     order: -1;
   }
 
@@ -8155,9 +8351,20 @@ button {
     );
   }
 
+  .ex-card__title {
+    font-size: 1.2rem;
+  }
+
   .ex-card__desc,
   .ex-card--wide .ex-card__desc {
     max-width: none;
+    font-size: 0.95rem;
+  }
+
+  .ex-card__cta {
+    margin-top: 0.85rem;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 }
 
@@ -8171,6 +8378,148 @@ button {
     transform: none;
     opacity: 1;
     transition: none;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* About page — mobile polish                                                 */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .page-about {
+    overflow-x: clip;
+  }
+
+  .page-about .post-hero {
+    min-height: min(100svh, 42rem);
+  }
+
+  .page-about .post-hero__inner {
+    min-height: min(100svh, 42rem);
+    padding-top: calc(var(--nav-h) + 1.75rem);
+    padding-bottom: clamp(2rem, 6vw, 3rem);
+  }
+
+  .page-about .post-hero__title {
+    max-width: 16ch;
+    margin-bottom: 0.9rem;
+  }
+
+  .page-about .post-hero__lead {
+    max-width: 34rem;
+    font-size: 1.02rem;
+    line-height: 1.55;
+  }
+
+  .page-about .founder,
+  .page-about .mandate,
+  .page-about .expertise {
+    padding-top: clamp(2.5rem, 8vw, 3.5rem);
+    padding-bottom: clamp(2.5rem, 8vw, 3.5rem);
+  }
+
+  .page-about .mandate__statement {
+    font-size: clamp(1.15rem, 4.6vw, 1.4rem);
+  }
+
+  .page-about .mandate__panel {
+    padding-top: 1rem;
+  }
+
+  .page-about .expertise__lead {
+    max-width: 28rem;
+    padding-inline: 0.25rem;
+  }
+
+  .page-about .post-block {
+    padding-top: clamp(2.5rem, 8vw, 3.75rem);
+    padding-bottom: clamp(2.5rem, 8vw, 3.75rem);
+  }
+
+  .page-about .post-block__media {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .page-about .post-block__media img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .page-about .post-beliefs {
+    padding-top: clamp(2.5rem, 8vw, 3.75rem);
+    padding-bottom: clamp(2.5rem, 8vw, 3.75rem);
+  }
+
+  .page-about .post-beliefs__row {
+    grid-template-columns: 3rem minmax(0, 1fr);
+    gap: 0.85rem;
+  }
+
+  .page-about .post-beliefs__name {
+    font-size: clamp(1.2rem, 5vw, 1.55rem);
+  }
+
+  .page-about .believe {
+    padding-top: clamp(2.5rem, 8vw, 3.5rem);
+    padding-bottom: clamp(2.5rem, 8vw, 3.5rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .page-about .nav {
+    gap: 0.65rem;
+    padding-inline: 1rem;
+  }
+
+  .page-about .nav__cta {
+    padding: 0 0.8rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+  }
+
+  .page-about .post-hero__title {
+    font-size: clamp(1.85rem, 8.5vw, 2.35rem);
+    line-height: 1.12;
+  }
+
+  .page-about .founder__media {
+    max-height: 22rem;
+    aspect-ratio: 1 / 1.05;
+  }
+
+  .page-about .founder__name {
+    font-size: clamp(1.7rem, 8vw, 2.1rem);
+  }
+
+  .page-about .founder__quote {
+    font-size: 1.05rem;
+  }
+
+  .page-about .mandate__grid {
+    gap: 1.5rem;
+  }
+
+  .page-about .philo__title .philo__line {
+    font-size: inherit;
+  }
+
+  .page-about .philo__lead {
+    margin-bottom: 1.25rem;
+  }
+
+  .page-about .philo__media {
+    aspect-ratio: 5 / 4;
+  }
+
+  .page-about .philo__overlay {
+    padding: 1.1rem 1rem;
+  }
+
+  .page-about .ex-card__media,
+  .page-about .ex-card--wide .ex-card__media {
+    height: 10rem;
   }
 }
 
