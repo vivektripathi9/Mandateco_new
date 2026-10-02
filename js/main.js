@@ -157,7 +157,7 @@
       rootMargin: "0px 0px -10% 0px"
     });
   });
-  document.querySelectorAll(".post-block, .post-beliefs, .svc-row, .svc-cta, .blog-article, .care-track, .care-why, .care-tracks, .care-roles, .care-culture, .care-apply, .care-role, .flow, .flow-card, .flow__head, .flow__steps, .believe, .case, .cases-cta").forEach(function (el) {
+  document.querySelectorAll(".post-block, .post-beliefs, .svc-row, .svc-cta, .blog-article, .care-track, .care-why, .care-tracks, .care-roles, .care-culture, .care-apply, .care-role, .flow, .flow-card, .flow__head, .flow__steps, .believe, .mandate, .expertise, .case, .cases-cta").forEach(function (el) {
     observeReveal(el);
   });
   observeReveal(document.querySelector(".flow-stats"), function () {
@@ -180,7 +180,11 @@
   initWhyNet(compare);
   initVoicesSlider(voices);
   initQuotesSlider(quotes);
-  initContactForm(document.getElementById("enquire-form"));
+  // Skip when page has its own inline submit handler (avoids double POST).
+  var enquireForm = document.getElementById("enquire-form");
+  if (enquireForm && enquireForm.getAttribute("data-self-submit") !== "true") {
+    initContactForm(enquireForm);
+  }
   initPostQa(document.getElementById("post-qa"));
 
   if (projects && location.hash === "#projects") {
@@ -704,20 +708,102 @@
     if (!form) return;
 
     const error = document.getElementById("enquire-error");
-    const done = form.querySelector(".enquire__done");
+    const done =
+      document.getElementById("enquire-done") ||
+      form.querySelector(".enquire__done");
+    const panel = form.closest(".enquire");
+    const submit =
+      document.getElementById("enq-submitBtn") ||
+      form.querySelector('button[type="submit"]');
+    const endpoint =
+      "https://mandateco-email-842590304846.asia-south1.run.app";
+    const defaultError =
+      error && error.textContent
+        ? error.textContent.trim()
+        : "Please fill the required fields before submitting.";
+    const submitError =
+      "Something went wrong. Please try again in a moment.";
+    const submitLabel = submit ? submit.textContent : "";
 
     form.addEventListener("submit", function (event) {
       event.preventDefault();
 
+      if (done) done.hidden = true;
+
       if (!form.checkValidity()) {
-        if (error) error.hidden = false;
+        if (error) {
+          error.textContent = defaultError;
+          error.hidden = false;
+        }
         form.reportValidity();
         return;
       }
 
       if (error) error.hidden = true;
-      form.classList.add("is-sent");
-      if (done) done.hidden = false;
+
+      const formData = new FormData(form);
+      const isCareer = Boolean(form.querySelector('[name="fullName"]'));
+      const payload = isCareer
+        ? {
+            formType: "career",
+            name: (formData.get("fullName") || "").toString().trim(),
+            email: (formData.get("email") || "").toString().trim(),
+            phone: (formData.get("phone") || "").toString().trim(),
+            role: (formData.get("role") || "").toString().trim(),
+            experience: (formData.get("experience") || "").toString().trim(),
+            message: (formData.get("message") || "").toString().trim(),
+          }
+        : {
+            formType: "contact",
+            name: (formData.get("name") || "").toString().trim(),
+            email: (formData.get("email") || "").toString().trim(),
+            phone: (formData.get("phone") || "").toString().trim(),
+            location: (formData.get("location") || "").toString().trim(),
+            projectType: (formData.get("projectType") || "").toString().trim(),
+            message: (formData.get("message") || "").toString().trim(),
+          };
+
+      if (submit) {
+        submit.disabled = true;
+        submit.textContent = "Submitting...";
+      }
+
+      fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      })
+        .then(function (response) {
+          return response.json().then(function (result) {
+            return { ok: response.ok, result: result };
+          });
+        })
+        .then(function (data) {
+          if (!data.result || data.result.success !== true) {
+            throw data.result || new Error("Submission failed");
+          }
+
+          form.reset();
+          form.classList.add("is-sent");
+          if (panel) panel.classList.add("is-sent");
+          if (done) done.hidden = false;
+          if (error) error.hidden = true;
+        })
+        .catch(function (err) {
+          console.error("Form submission failed:", err);
+          if (error) {
+            error.textContent = submitError;
+            error.hidden = false;
+          }
+        })
+        .finally(function () {
+          if (submit) {
+            submit.disabled = false;
+            submit.textContent = submitLabel;
+          }
+        });
     });
   }
 
