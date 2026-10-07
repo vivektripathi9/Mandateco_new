@@ -3611,7 +3611,7 @@ button {
 .footer__logo {
   height: 52px;
   width: auto;
-  filter: brightness(0) saturate(100%) invert(21%) sepia(89%) saturate(1842%) hue-rotate(176deg) brightness(91%) contrast(92%);
+  filter: brightness(0);
 }
 
 .footer__kicker {
