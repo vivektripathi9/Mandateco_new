@@ -3611,7 +3611,7 @@ button {
 }
 
 .footer__logo {
-  height: 52px;
+  height: 64px;
   width: auto;
   filter: brightness(0);
 }
@@ -3632,9 +3632,23 @@ button {
 
 .footer__line {
   margin: 0;
-  max-width: 18rem;
+  max-width: 22rem;
   color: rgba(6, 75, 120, 0.86);
   overflow-wrap: anywhere;
+}
+
+.footer__legal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.18rem;
+  margin-top: 0.2rem;
+}
+
+.footer__legal .footer__line {
+  max-width: none;
+  font-size: 0.82em;
+  line-height: 1.45;
+  color: rgba(6, 75, 120, 0.72);
 }
 
 .footer__list,
